@@ -84,6 +84,7 @@ app.delete('/series/:id', (c) => {
   })
 })
 
+// Change this to HTTP PATCH
 app.put('/series/:id', async (c) => {
   const body = await c.req.json()
   const item = series.find((s) => s.id === c.req.param('id'))

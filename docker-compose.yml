@@ -11,6 +11,9 @@ services:
     image: postgres:alpine
     ports:
       - '5432:5433'
+    # Can use env_file instead
+    # https://docs.docker.com/compose/environment-variables/set-environment-variables/#use-the-env_file-attribute
+    # env_file: .env
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
